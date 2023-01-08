@@ -18,18 +18,13 @@ button {
 
 // GENERAL STYLES
 
-:root {
-    --color-background: #141d2f;
-    --color-white: #fff;
-}
-
 body {
     font-family: "Space Mono", monospace;
     font-size: 16px;
     font-weight: 400;
     color: #fff;
 
-    background-color: var(--color-background);
+    background-color: var(--color-bg);
     margin: 31px 24px 79px 24px;
 
     // 758/16=48

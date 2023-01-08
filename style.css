@@ -14,17 +14,12 @@ button {
   font: inherit;
 }
 
-:root {
-  --color-background: #141d2f;
-  --color-white: #fff;
-}
-
 body {
   font-family: "Space Mono", monospace;
   font-size: 16px;
   font-weight: 400;
   color: #fff;
-  background-color: var(--color-background);
+  background-color: var(--color-bg);
   margin: 31px 24px 79px 24px;
 }
 @media only screen and (min-width: 48em) {
@@ -54,6 +49,7 @@ body {
   font-weight: 700;
   font-size: 26px;
   line-height: 39px;
+  color: var(--color-logo);
 }
 .header__theme {
   display: flex;
@@ -66,17 +62,17 @@ body {
   font-size: 13px;
   line-height: 19px;
   letter-spacing: 2.5px;
-  color: #fff;
+  color: var(--color-theme-button);
   text-transform: uppercase;
   transition: color 0.2s;
 }
 .header__theme__icon {
   transition: fill 0.2s;
-  fill: #fff;
+  fill: var(--color-theme-button);
 }
 .header__theme:hover .header__theme__text, .header__theme:hover .header__theme__icon {
-  color: #90a4d4;
-  fill: #90a4d4;
+  color: var(--color-theme-button-hover);
+  fill: var(--color-theme-button-hover);
 }
 
 .form {
@@ -93,19 +89,19 @@ body {
 .form__input {
   width: 100%;
   height: 100%;
-  background-color: #1e2a47;
+  background-color: var(--color-bg-secondary);
   border-radius: 15px;
   border: none;
   padding-left: 45px;
   font-weight: 400;
   font-size: 13px;
   line-height: 25px;
-  color: #ffffff;
+  color: var(--color-form-input);
   cursor: pointer;
   box-shadow: 0px 16px 30px -10px rgba(70, 95, 187, 0.1986);
 }
 .form__input::placeholder {
-  color: #ffffff;
+  color: var(--color-form-input-placeholder);
 }
 .form__input:focus {
   outline: none;
@@ -167,7 +163,7 @@ body {
   font-size: 15px;
   line-height: 22px;
   color: #f74646;
-  transition: opacity 0.2s;
+  transition: opacity 0.1s;
 }
 @media only screen and (min-width: 48em) {
   .form__message {
@@ -178,13 +174,12 @@ body {
 
 .card {
   width: 100%;
-  background-color: #1e2a47;
+  background-color: var(--color-bg-secondary);
   border-radius: 15px;
   padding: 32px 24px 48px 24px;
   box-shadow: 0px 16px 30px -10px rgba(70, 95, 187, 0.1986);
   font-size: 13px;
   font-weight: 400;
-  color: #ffffff;
 }
 @media only screen and (min-width: 48em) {
   .card {
@@ -230,6 +225,7 @@ body {
   grid-row: 1/2;
   width: 100%;
   height: 100%;
+  border-radius: 50%;
 }
 .card__profile__box {
   grid-row: 1/2;
@@ -249,6 +245,7 @@ body {
   font-weight: 700;
   font-size: 16px;
   line-height: 24px;
+  color: var(--color-name-social);
 }
 @media only screen and (min-width: 48em) {
   .card__profile__name {
@@ -276,6 +273,7 @@ body {
   grid-row: 1/2;
   grid-column: 2/3;
   margin-top: auto;
+  color: var(--color-joined);
 }
 @media only screen and (min-width: 48em) {
   .card__profile__joined {
@@ -296,6 +294,7 @@ body {
 .card__bio {
   line-height: 25px;
   margin-bottom: 23px;
+  color: var(--color-text);
 }
 @media only screen and (min-width: 48em) {
   .card__bio {
@@ -309,14 +308,14 @@ body {
   }
 }
 .card__social {
-  background-color: #141d2f;
+  background-color: var(--color-bg-social);
   border-radius: 10px;
   padding: 18px 15px 19px 15px;
   text-align: center;
   font-weight: 400;
   font-size: 11px;
   line-height: 16px;
-  color: #ffffff;
+  color: var(--color-text);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr 1fr;
@@ -379,7 +378,7 @@ body {
   font-weight: 400;
   font-size: 13px;
   line-height: 19px;
-  color: #ffffff;
+  color: var(--color-text);
 }
 @media only screen and (min-width: 48em) {
   .card__info {
@@ -398,7 +397,7 @@ body {
 }
 .card__info__icon {
   display: block;
-  fill: #fff;
+  fill: var(--color-text);
 }
 .card__info__icon:nth-child(1) {
   margin-left: 3px;

@@ -9,6 +9,7 @@
         font-weight: 700;
         font-size: 26px;
         line-height: 39px;
+        color: var(--color-logo);
     }
 
     &__theme {
@@ -22,20 +23,20 @@
             font-size: 13px;
             line-height: 19px;
             letter-spacing: 2.5px;
-            color: #fff;
+            color: var(--color-theme-button);
             text-transform: uppercase;
             transition: color 0.2s;
         }
 
         &__icon {
             transition: fill 0.2s;
-            fill: #fff;
+            fill: var(--color-theme-button);
         }
 
         &:hover &__text,
         &:hover &__icon {
-            color: #90a4d4;
-            fill: #90a4d4;
+            color: var(--color-theme-button-hover);
+            fill: var(--color-theme-button-hover);
         }
     }
 }
