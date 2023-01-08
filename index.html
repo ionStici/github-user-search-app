@@ -15,7 +15,63 @@
 <body>
 
 
+    <header class="header">
+        <h1 class="header__h1">devfinder</h1>
 
+        <div class="header__theme">
+            <p class="header__theme__text">light</p>
+            <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg"><g class="header__theme__icon" fill-rule="nonzero"><path d="M13.545 6.455c-.9-.9-2.17-1.481-3.545-1.481a4.934 4.934 0 00-3.545 1.481c-.9.9-1.481 2.17-1.481 3.545 0 1.376.582 2.646 1.481 3.545.9.9 2.17 1.481 3.545 1.481a4.934 4.934 0 003.545-1.481c.9-.9 1.481-2.17 1.481-3.545a4.934 4.934 0 00-1.481-3.545zM10 3.413a.7.7 0 00.688-.688V.688A.7.7 0 0010 0a.7.7 0 00-.688.688v2.037a.7.7 0 00.688.688zM15.635 5.344l1.455-1.455a.67.67 0 000-.952.67.67 0 00-.952 0l-1.455 1.455a.67.67 0 000 .952c.238.264.66.264.952 0zM19.312 9.312h-2.037a.7.7 0 00-.688.688.7.7 0 00.688.688h2.037A.7.7 0 0020 10a.7.7 0 00-.688-.688zM15.608 14.656a.67.67 0 00-.952 0 .67.67 0 000 .952l1.455 1.455a.67.67 0 00.952 0 .67.67 0 000-.952l-1.455-1.455zM10 16.587a.7.7 0 00-.688.688v2.037A.7.7 0 0010 20a.7.7 0 00.688-.688v-2.037a.7.7 0 00-.688-.688zM4.365 14.656L2.91 16.111a.67.67 0 000 .952.67.67 0 00.952 0l1.455-1.455a.67.67 0 000-.952c-.238-.264-.66-.264-.952 0zM3.413 10a.7.7 0 00-.688-.688H.688A.7.7 0 000 10a.7.7 0 00.688.688h2.037A.7.7 0 003.413 10zM4.365 5.344a.67.67 0 00.952 0 .67.67 0 000-.952L3.862 2.937a.67.67 0 00-.952 0 .67.67 0 000 .952l1.455 1.455z"/></g></svg>
+        </div>
+    </header>
+
+
+
+
+
+    <main class="main">
+        <form class="form">
+            <img class="form__icon" src="./assets/icon-search.svg" aria-hidden=“true”>
+            <p class="form__message">No results</p>
+            <input class="form__input" type="text" placeholder="Search GitHub username…">
+            <button class="form__btn">Search</button>
+        </form>
+
+        <div class="card">
+            <div class="card__profile">
+                <img class="card__profile__picture" src="./assets/favicon-32x32.png" alt="User's Picture">
+
+                <div class="card__profile__box">
+                    <p class="card__profile__name">The Octocat</p>
+                    <p class="card__profile__username">@octocat</p>
+                </div>
+
+                <p class="card__profile__joined">Joined 25 jan 2011</p>
+            </div>
+
+            <p class="card__bio">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.</p>
+
+            <div class="card__social">
+                <p class="card__social__repos">Repos</p>
+                <p class="card__social__current-repos">8</p>
+                <p class="card__social__followers">Followers</p>
+                <p class="card__social__current-followers">3938</p>
+                <p class="card__social__following">Following</p>
+                <p class="card__social__current-following">9</p>
+            </div>
+
+            <div class="card__info">
+                <img class="card__info__icon" src="./assets/icon-location.svg" alt="">
+                <p class="card__location">San Francisco</p>
+                <img class="card__info__icon" src="./assets/icon-website.svg" alt="">
+                <p class="card__blog">https://github.blog</p>
+                <img class="card__info__icon" src="./assets/icon-twitter.svg" alt="">
+                <p class="card__twitter">Not Available</p>
+                <img class="card__info__icon" src="./assets/icon-company.svg" alt="">
+                <p class="card__company">@github</p>
+            </div>
+
+        </div>
+    </main>
 
 </body>
 </html>
