@@ -1,0 +1,17 @@
+{
+    "name": "github-user-search-app",
+    "version": "1.0.0",
+    "description": "This is a solution to the [GitHub user search app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/github-user-search-app-Q09YOgaH6).",
+    "main": "script.js",
+    "scripts": {
+        "live": "live-server",
+        "sass": "sass sass/main.scss style.css -w",
+        "start": "npm-run-all --parallel  live sass"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "npm-run-all": "^4.1.5",
+        "sass": "^1.57.1"
+    }
+}
