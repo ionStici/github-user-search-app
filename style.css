@@ -27,10 +27,56 @@ body {
   background-color: var(--color-background);
   margin: 31px 24px 79px 24px;
 }
+@media only screen and (min-width: 48em) {
+  body {
+    margin: 140px 98px 236px 98px;
+  }
+}
+@media only screen and (min-width: 75em) {
+  body {
+    margin: 144px 100px 170px 100px;
+  }
+}
 
 .main {
   max-width: 730px;
   margin: 0 auto;
+}
+
+.header {
+  max-width: 730px;
+  margin: 0 auto 36px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__h1 {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 39px;
+}
+.header__theme {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+}
+.header__theme__text {
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 19px;
+  letter-spacing: 2.5px;
+  color: #fff;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+.header__theme__icon {
+  transition: fill 0.2s;
+  fill: #fff;
+}
+.header__theme:hover .header__theme__text, .header__theme:hover .header__theme__icon {
+  color: #90a4d4;
+  fill: #90a4d4;
 }
 
 /*# sourceMappingURL=style.css.map */

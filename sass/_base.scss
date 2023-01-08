@@ -31,6 +31,16 @@ body {
 
     background-color: var(--color-background);
     margin: 31px 24px 79px 24px;
+
+    // 758/16=48
+    @media only screen and (min-width: 48em) {
+        margin: 140px 98px 236px 98px;
+    }
+
+    // 1200/16=75
+    @media only screen and (min-width: 75em) {
+        margin: 144px 100px 170px 100px;
+    }
 }
 
 //
