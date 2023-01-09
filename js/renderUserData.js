@@ -64,6 +64,72 @@ export const renderUserData = async function (username) {
         ? user.twitter_username
         : "Not Available";
     company.textContent = user.company ? user.company : "Not Available";
+
+    if (!user.bio) {
+        bio.style.opacity = "0.75";
+    } else {
+        bio.style.opacity = "1";
+    }
+
+    if (!user.location) {
+        location.style.opacity = "0.5";
+        location.previousElementSibling.style.opacity = "0.5";
+    } else {
+        location.style.opacity = "1";
+        location.previousElementSibling.style.opacity = "1";
+    }
+
+    if (!user.blog) {
+        website.style.opacity = "0.5";
+        website.previousElementSibling.style.opacity = "0.5";
+    } else {
+        website.style.opacity = "1";
+        website.previousElementSibling.style.opacity = "1";
+    }
+
+    if (!user.twitter_username) {
+        twitter.style.opacity = "0.5";
+        twitter.previousElementSibling.style.opacity = "0.5";
+    } else {
+        twitter.style.opacity = "1";
+        twitter.previousElementSibling.style.opacity = "1";
+    }
+
+    if (!user.company) {
+        company.style.opacity = "0.5";
+        company.previousElementSibling.style.opacity = "0.5";
+    } else {
+        company.style.opacity = "1";
+        company.previousElementSibling.style.opacity = "1";
+    }
+
+    document.documentElement.style.setProperty("--underline-twitter", "none");
+    document.documentElement.style.setProperty("--underline-blog", "none");
+
+    if (user.twitter_username) {
+        document.documentElement.style.setProperty(
+            "--underline-twitter",
+            "underline"
+        );
+
+        twitter.setAttribute(
+            "href",
+            `https://twitter.com/${user.twitter_username}`
+        );
+    } else {
+        twitter.removeAttribute("href");
+    }
+
+    if (user.blog) {
+        document.documentElement.style.setProperty(
+            "--underline-blog",
+            "underline"
+        );
+
+        website.setAttribute("href", `${user.blog}`);
+    } else {
+        website.removeAttribute("href");
+    }
 };
 
 // // // // // // // // // // // // // // // // // // // //
