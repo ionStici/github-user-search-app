@@ -1,4 +1,11 @@
-import { setDarkTheme, setLightTheme } from "./changeTheme.js";
+import { setDarkTheme, setLightTheme } from "./switchTheme.js";
+import { renderUserData } from "./renderUserData.js";
+
+// // // // // // // // // // // // // // // // // // // //
+
+const form = document.querySelector(".form");
+const btn = document.querySelector(".form__btn");
+const input = document.querySelector(".form__input");
 
 // // // // // // // CHANGE THEME LOGIC // // // // // // //
 
@@ -15,35 +22,17 @@ const changeTheme = function () {
 
 document.querySelector(".header__theme").addEventListener("click", changeTheme);
 
-// // // // // // // // // // // // // // // // // // // //
+// // // // // // // SEARCH // // // // // // //
 
-// prettier-ignore
-"#4B6A9B";
-// prettier-ignore
-"rgba(75, 106, 155, 0.5)";
-
-// GET DATA ABOUT THE USER
-
-const getUser = async function (username) {
-    const res = await fetch(`https://api.github.com/users/${username}`);
-    const user = await res.json();
-
-    const userData = [
-        user.avatar_url,
-        user.name,
-        user.login,
-        user.created_at,
-        user.bio,
-        user.public_repos,
-        user.followers,
-        user.following,
-        user.location,
-        user.blog,
-        user.twitter_username,
-        user.company,
-    ];
-
-    console.log(user.twitter_username);
+const search = function (e) {
+    e.preventDefault();
+    renderUserData(input.value);
+    input.value = "";
 };
 
-getUser("ionStici");
+renderUserData("octocat");
+
+form.addEventListener("submit", search);
+btn.addEventListener("click", search);
+
+// // // // // // // // // // // // // // // // // // // //

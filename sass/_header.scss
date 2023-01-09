@@ -1,15 +1,20 @@
 .header {
-    max-width: 730px;
+    max-width: 450px;
     margin: 0 auto 36px auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    font-weight: 700;
+
+    @media only screen and (min-width: 48em) {
+        max-width: 730px;
+    }
 
     &__h1 {
-        font-weight: 700;
         font-size: 26px;
         line-height: 39px;
         color: var(--color-logo);
+        transition: color 0.2s;
     }
 
     &__theme {
@@ -19,18 +24,17 @@
         cursor: pointer;
 
         &__text {
-            font-weight: 700;
             font-size: 13px;
             line-height: 19px;
             letter-spacing: 2.5px;
-            color: var(--color-theme-button);
             text-transform: uppercase;
+            color: var(--color-theme-button);
             transition: color 0.2s;
         }
 
         &__icon {
-            transition: fill 0.2s;
             fill: var(--color-theme-button);
+            transition: fill 0.2s;
         }
 
         &:hover &__text,

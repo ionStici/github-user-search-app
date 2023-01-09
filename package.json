@@ -5,7 +5,7 @@
     "main": "script.js",
     "scripts": {
         "live": "live-server",
-        "sass": "sass sass/main.scss style.css -w",
+        "sass": "sass sass/main.scss sass/style.css -w",
         "start": "npm-run-all --parallel  live sass"
     },
     "author": "",

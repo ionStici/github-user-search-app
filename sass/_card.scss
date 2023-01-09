@@ -1,23 +1,22 @@
 .card {
     width: 100%;
-    background-color: var(--color-bg-secondary);
     border-radius: 15px;
     padding: 32px 24px 48px 24px;
     box-shadow: 0px 16px 30px -10px rgba(70, 95, 187, 0.1986);
 
-    @media only screen and (min-width: 48em) {
-        padding: 40px;
-    }
-
-    @media only screen and (min-width: 75em) {
-        padding: 48px;
-    }
+    background-color: var(--color-bg-secondary);
+    transition: background-color 0.2s;
 
     font-size: 13px;
     font-weight: 400;
 
     @media only screen and (min-width: 48em) {
         font-size: 15px;
+        padding: 40px;
+    }
+
+    @media only screen and (min-width: 75em) {
+        padding: 48px;
     }
 
     // PROFILE
@@ -35,8 +34,8 @@
             grid-template-rows: 117px;
             grid-template-columns: 117px 1fr;
             column-gap: 41px;
-            margin-bottom: 24px;
 
+            margin-bottom: 24px;
             line-height: 22px;
         }
 
@@ -69,10 +68,16 @@
         }
 
         &__name {
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+
             font-weight: 700;
             font-size: 16px;
             line-height: 24px;
+
             color: var(--color-name-social);
+            transition: color 0.2s;
 
             @media only screen and (min-width: 48em) {
                 font-size: 26px;
@@ -81,8 +86,11 @@
             }
         }
 
-        &__username {
+        &__username,
+        &__username:link,
+        &__username:visited {
             color: #0079ff;
+            text-decoration: none;
 
             @media only screen and (min-width: 48em) {
                 font-size: 16px;
@@ -96,10 +104,16 @@
         }
 
         &__joined {
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+
             grid-row: 1 / 2;
             grid-column: 2 / 3;
             margin-top: auto;
+
             color: var(--color-joined);
+            transition: color 0.2s;
 
             @media only screen and (min-width: 48em) {
                 margin-top: revert;
@@ -122,7 +136,9 @@
     &__bio {
         line-height: 25px;
         margin-bottom: 23px;
+
         color: var(--color-text);
+        transition: color 0.2s;
 
         @media only screen and (min-width: 48em) {
             margin-bottom: 32px;
@@ -137,7 +153,6 @@
     // SOCIAL
 
     &__social {
-        background-color: var(--color-bg-social);
         border-radius: 10px;
         padding: 18px 15px 19px 15px;
 
@@ -145,7 +160,10 @@
         font-weight: 400;
         font-size: 11px;
         line-height: 16px;
+
+        background-color: var(--color-bg-social);
         color: var(--color-text);
+        transition: color 0.2s, background-color 0.2s;
 
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -214,14 +232,15 @@
         align-items: center;
         column-gap: 13px;
         row-gap: 16px;
-
         grid-template-rows: repeat(4, fr);
         grid-template-columns: 20px 1fr;
 
         font-weight: 400;
         font-size: 13px;
         line-height: 19px;
+
         color: var(--color-text);
+        transition: color 0.2s;
 
         @media only screen and (min-width: 48em) {
             column-gap: 16px;
@@ -241,22 +260,52 @@
         &__icon {
             display: block;
             fill: var(--color-text);
+            transition: fill 0.2s;
 
             &:nth-child(1) {
                 margin-left: 3px;
             }
         }
 
-        &__location {
-        }
-
-        &__blog {
-        }
-
-        &__twitter {
-        }
-
+        &__location,
+        &__blog,
+        &__twitter,
         &__company {
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        @media only screen and (min-width: 48em) {
+            &__icon {
+                &:nth-child(3) {
+                    grid-column: 1 / 2;
+                    grid-row: 2 / 3;
+                }
+            }
+
+            &__blog {
+                grid-column: 2 / 3;
+                grid-row: 2 / 3;
+            }
+        }
+
+        &__blog,
+        &__blog:link,
+        &__blog:visited,
+        &__twitter,
+        &__twitter:link,
+        &__twitter:visited {
+            text-decoration: none;
+            color: var(--color-text);
+        }
+
+        &__blog:hover {
+            text-decoration: var(--underline-blog);
+        }
+
+        &__twitter:hover {
+            text-decoration: var(--underline-twitter);
         }
     }
 }
